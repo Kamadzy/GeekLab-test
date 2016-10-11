@@ -2,7 +2,8 @@
   <ion-content padding="true" class="has-header">
     <form id="page-form3" class="list">
       <label class="item item-input" id="page-input5" name="Input">
-        <input type="text" placeholder="">
+        <input type="text" placeholder="" ng-model="test" ng-trim="false" maxlength="140">
+        <span>{{140-test.length}} left</span>
       </label>
     </form>
   </ion-content>
