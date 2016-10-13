@@ -2,11 +2,14 @@
   <ion-content padding="true" class="has-header">
     <form id="page-form3" class="list">
       <label class="item item-input" id="page-input5" name="Input">
-     <input type="text" placeholder="" ng-model="test" ng-trim="false" maxlength="140" >
+     <input type="text" placeholder="" ng-model="test" ng-trim="false" ng-show="focus" ng-focus="focus=true" ng-blur="focus=false" maxlength="140" >
       </label>
     </form>
     <div class="counter">
       <span>{{140-test.length}} left</span>
+    </div>
+    <div id="parserText">
+      <p ng-bind-html="test | tweetLinky:'_blank'" ng-show="!focus" ng-click="focus = true"></p>
     </div>
 
   </ion-content>
