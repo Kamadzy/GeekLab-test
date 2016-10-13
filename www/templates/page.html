@@ -5,12 +5,13 @@
      <input type="text" placeholder="" ng-model="test" ng-trim="false" ng-show="focus" ng-focus="focus=true" ng-blur="focus=false" maxlength="140" >
       </label>
     </form>
-    <div class="counter">
-      <span>{{140-test.length}} left</span>
+    <div class="bar bar-footer">
+      <div class="col text-right">
+        <span class="counter">{{140-test.length}}</span>
+      </div>
     </div>
     <div id="parserText">
       <p ng-bind-html="test | tweetLinky:'_blank'" ng-show="!focus" ng-click="focus = true"></p>
     </div>
-
   </ion-content>
 </ion-view>
