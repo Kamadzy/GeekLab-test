@@ -1,9 +1,9 @@
 <ion-view title="Page" id="page1">
   <ion-content padding="true" class="has-header">
-      <input class="input-main" type="text" placeholder="" ng-model="test" ng-trim="false" ng-show="focus" ng-focus="focus=true" ng-blur="focus=false" maxlength="140" autofocus>
+      <textarea class="input-main" type="text" placeholder="" ng-model="test" ng-trim="false" ng-show="focus" ng-focus="focus=true" ng-blur="focus=false" autofocus></textarea>
     <div class="bar bar-footer">
       <div class="col text-right">
-        <span class="counter">{{140-test.length}}</span>
+        <span ng-class="test.length>140 ? 'red': 'purple'">{{140-test.length}}</span>
       </div>
     </div>
     <div id="parserText">
